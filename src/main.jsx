@@ -1,5 +1,8 @@
 
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+//import CourseInfo from './CourseInfo.jsx'
+//import Unicafe from './Unicafe.jsx'
+import Anecdotes from './Anecdotes.jsx'
+
+ReactDOM.createRoot(document.getElementById('root')).render(<Anecdotes/>)
