@@ -20,6 +20,7 @@ const CourseInfo = () => {
     ]
   }
   
+  
 
   return (
     <div>
