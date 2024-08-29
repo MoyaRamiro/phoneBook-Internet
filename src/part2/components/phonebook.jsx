@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import services from "../../services";
-const baseUrl = 'http://localhost:3001/persons';
+const baseUrl = "http://localhost:3001/persons";
 
 const Phonebook = () => {
   const [persons, setPersons] = useState([]);
@@ -86,7 +86,6 @@ const Phonebook = () => {
 
         setPersons(newPersons);
 
-
         console.log(newPersons);
       })
       .catch((error) => {
@@ -103,15 +102,15 @@ const Phonebook = () => {
 
     if (verifyPerson()) {
       updatePerson();
-      setNewMsg({msg : `Updated ${newEntry.name}`, color : 'green'});
+      setNewMsg({ msg: `Updated ${newEntry.name}`, color: "green" });
       setTimeout(() => {
-        setNewMsg({color : "", msg : ''});
+        setNewMsg({ color: "", msg: "" });
         window.location.reload();
       }, 3000);
     } else {
       createPerson();
-      setNewMsg({msg : `Added ${newEntry.name}`, color: 'green'});
-      setTimeout(() => setNewMsg({color : "", msg : ''}), 3000);
+      setNewMsg({ msg: `Added ${newEntry.name}`, color: "green" });
+      setTimeout(() => setNewMsg({ color: "", msg: "" }), 3000);
     }
   };
 
@@ -141,7 +140,9 @@ const Phonebook = () => {
         onChange={handleInputChange}
       />
 
-      {newMsg.msg && <NotificationMsg message={newMsg.msg} color={newMsg.color} />}
+      {newMsg.msg && (
+        <NotificationMsg message={newMsg.msg} color={newMsg.color} />
+      )}
 
       <h2>Numbers</h2>
 
@@ -153,7 +154,7 @@ const Phonebook = () => {
 const NotificationMsg = ({ message, color }) => (
   <h4
     style={{
-      color: `${ color }`,
+      color: `${color}`,
       background: "lightgrey",
       fontSize: "20px",
       borderStyle: "solid",
