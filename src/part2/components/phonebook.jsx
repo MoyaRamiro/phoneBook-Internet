@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import services from "../../services";
-const baseUrl = "http://localhost:3001/persons";
+
+const baseUrl = "http://localhost:7777/api/persons";
 
 const Phonebook = () => {
   const [persons, setPersons] = useState([]);
