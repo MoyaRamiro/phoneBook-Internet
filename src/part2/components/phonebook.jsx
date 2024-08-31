@@ -60,6 +60,10 @@ const Phonebook = () => {
       )
     ) {
       const personToUpdate = findPerson(newEntry);
+      if (!personToUpdate) {
+        console.log("Person not found");
+        return;
+      }
       console.log(personToUpdate, personToUpdate.id);
 
       services
@@ -76,7 +80,7 @@ const Phonebook = () => {
           setTimeout(() => {
             setNewMsg({ msg: "", color: "" });
             window.location.reload();
-          }, 3000);
+          }, 10440000);
         });
     }
   };
